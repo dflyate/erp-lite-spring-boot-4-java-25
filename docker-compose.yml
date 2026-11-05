@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: debuggeandoideas
       POSTGRES_PASSWORD: secret
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - ./db/postgresql:/docker-entrypoint-initdb.d
     networks:
@@ -29,7 +29,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: secret
       MONGO_INITDB_DATABASE: erp_catalog_db
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
       - ./db/mongodb:/docker-entrypoint-initdb.d
     networks:

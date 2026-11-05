@@ -3,11 +3,14 @@ plugins {
 }
 
 dependencies {
+	// Spring Web solo para el módulo API
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Dependencias de otros módulos
+	implementation project(':erp-common')
+	implementation project(':erp-domain')
 	implementation project(':erp-application')
-	runtimeOnly project(':erp-infrastructure')
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation project(':erp-infrastructure')
 }
 
 tasks.named('test') {
